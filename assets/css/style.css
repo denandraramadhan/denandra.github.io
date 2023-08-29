@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+:root {
+    --text-color: #fff;
+    --bg-color: #1b1f24;
+    --second-bg-color: #22282f;
+    --main-color: #13bbff;
+    --other-color: #c3cad5;
+}
+
+body {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    font-family: "Inter", sans-serif;
+    scroll-behavior: smooth;
+    height: 300vh;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 16%;
+    z-index: 1000;
+    background: transparent;
+    transition: all 0.5s ease;
+}
+header .logo {
+    font-size: 36px;
+    color: var(--text-color);
+    font-weight: 600;
+    /* font-family: "Lobster", cursive; */
+    font-family: "Kaushan Script", cursive;
+}
+
+header .logo span {
+    color: var(--main-color);
+}
+
+header ul {
+    display: flex;
+}
+
+header ul a {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-left: 40px;
+    transition: all 0.5s ease;
+}
+
+header ul a:hover {
+    color: var(--main-color);
+    text-shadow: 3px 3px 20px var(--main-color), -2px 1px 30px var(--text-color);
+}
+
+header #menu-icon {
+    font-size: 35px;
+    z-index: 1001;
+    cursor: pointer;
+    display: none;
+}
+
+header.sticky {
+    background: var(--second-bg-color);
+    box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.2);
+    padding: 16px 16%;
+}
