@@ -4,7 +4,8 @@
     --text-color: #fff;
     --bg-color: #1b1f24;
     --second-bg-color: #22282f;
-    --main-color: #13bbff;
+    --main-color: #0ef;
+    /* --main-color: #13bbff; */
     --other-color: #c3cad5;
 }
 
@@ -36,9 +37,11 @@ header .logo {
     font-weight: 600;
     /* font-family: "Lobster", cursive; */
     font-family: "Kaushan Script", cursive;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
 }
 
-header .logo span {
+span {
     color: var(--main-color);
 }
 
@@ -47,11 +50,15 @@ header ul {
 }
 
 header ul a {
+    display: inline-block;
     font-size: 1.2rem;
     font-weight: 500;
     color: var(--text-color);
     margin-left: 40px;
     transition: all 0.5s ease;
+    opacity: 0;
+    animation: slideTop 0.5s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
 }
 
 header ul a:hover {
@@ -70,4 +77,127 @@ header.sticky {
     background: var(--second-bg-color);
     box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.2);
     padding: 16px 16%;
+}
+
+.active {
+    color: var(--main-color);
+}
+
+section {
+    padding: 50px 16%;
+}
+/* Home */
+#home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+#home img {
+    width: 500px;
+    height: 550px;
+    object-fit: cover;
+    border-radius: 50px;
+    transition: all 0.5s ease;
+    opacity: 0;
+    animation: zoomIn 1s ease forwards;
+    animation-delay: 2s;
+}
+#home img:hover {
+    transform: scale(1.1);
+}
+
+.intro {
+    padding-right: 150px;
+}
+
+.intro h4 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 0.7s;
+}
+
+.intro h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    margin: 20px 0px 20px;
+    line-height: 1.2;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.intro p {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--other-color);
+    line-height: 30px;
+    margin-bottom: 15px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.intro .social {
+    margin-bottom: 40px;
+}
+
+.intro .social i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--main-color);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    backdrop-filter: brightness(88%);
+    font-size: 20px;
+    margin-right: 17px;
+    box-shadow: 0 0 20px transparent;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
+}
+
+.intro .social i:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px var(--main-color);
+}
+
+.intro .intro-btn a {
+    display: inline-block;
+    background: #0ef;
+    padding: 11px 26px;
+    color: var(--bg-color);
+    border: 2px solid var(--main-color);
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.5s ease;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+}
+
+.intro .intro-btn a:hover {
+    background: transparent;
+    color: var(--main-color);
+    box-shadow: 0 0 20px var(--main-color);
+}
+
+.intro .intro-btn .btn2 {
+    background: transparent;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    margin-left: 15px;
+    transition: all 0.5s ease;
+}
+
+.intro .intro-btn .btn2:hover {
+    color: var(--bg-color);
+    background: var(--main-color);
 }

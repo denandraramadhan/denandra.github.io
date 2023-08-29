@@ -7,6 +7,7 @@
         <title>Portfolio</title>
         <!-- My CSS -->
         <link rel="stylesheet" href="./assets/css/reset.css" />
+        <link rel="stylesheet" href="./assets/css/animate.css" />
         <link rel="stylesheet" href="./assets/css/style.css" />
         <!-- Box Icons -->
         <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
@@ -28,13 +29,37 @@
             <a href="#" class="logo">Portfolio.</a>
             <div class="bx bx-menu" id="menu-icon"></div>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a class="active" href="#home" style="--i: 1">Home</a></li>
+                <li><a href="#about" style="--i: 2">About</a></li>
+                <li><a href="#skills" style="--i: 3">Skills</a></li>
+                <li><a href="#portfolio" style="--i: 4">Portfolio</a></li>
+                <li><a href="#contact" style="--i: 5">Contact</a></li>
             </ul>
         </header>
+        <section id="home">
+            <div class="intro">
+                <h4>Hi, There!</h4>
+                <h1>I'm <span id="typing"></span></h1>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores
+                    reprehenderit non totam quia officiis nihil, facere autem delectus qui libero?
+                </p>
+                <div class="social">
+                    <a href="#" style="--i: 7"><i class="ri-facebook-fill"></i></a>
+                    <a href="#" style="--i: 8"><i class="ri-instagram-fill"></i></a>
+                    <a href="#" style="--i: 9"><i class="ri-github-fill"></i></a>
+                    <a href="#" style="--i: 10"><i class="ri-linkedin-fill"></i></a>
+                </div>
+                <div class="intro-btn">
+                    <a href="#">Hire Me</a>
+                    <a href="#" class="btn2">Download CV</a>
+                </div>
+            </div>
+            <img src="./assets/img/deni.jpeg" alt="" />
+        </section>
+
+        <!-- Typed.js -->
+        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
         <script src="./assets/js/script.js"></script>
     </body>
 </html>
