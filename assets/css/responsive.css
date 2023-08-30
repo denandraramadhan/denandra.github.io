@@ -56,6 +56,7 @@
         flex-direction: column-reverse;
         row-gap: 40px;
         padding-top: 200px;
+        justify-content: flex-end;
     }
 
     .intro {
@@ -109,8 +110,8 @@
     }
 
     #home img {
-        width: 350px;
-        height: 400px;
+        width: 300px;
+        height: 350px;
     }
     .intro .intro-btn a {
         padding: 16px 21px;
