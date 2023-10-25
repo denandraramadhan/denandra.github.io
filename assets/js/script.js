@@ -11,7 +11,7 @@ window.addEventListener("scroll", () => {
 // const navList = document.querySelector("#navList");
 // hamburger.addEventListener("click", () => {
 //     hamburger.classList.toggle("bx-x");
-//     navList.classList.toggle("active");
+//     navList.classList.toggle("active");;
 // });
 
 // Typed text
