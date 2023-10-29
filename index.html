@@ -44,57 +44,22 @@
     </head>
     <body class="bg-bgMain text-white">
         <header
+            id="headerContainer"
             class="z-40 fixed w-full h-16 px-4 md:px-0 flex items-center bg-transparent transition-all duration-500 ease-in-out"
-        >
-            <div class="flex justify-between items-center container mx-auto">
-                <a href="#" class="text-4xl font-bold">Portfolio.</a>
-                <nav>
-                    <!-- <div class="bx bx-menu md:!hidden text-2xl" id="menu-icon"></div> -->
-                    <ul id="navList" class="hidden md:flex">
-                        <li>
-                            <a
-                                class="text-xl font-medium ml-10 text-main hover:text-main"
-                                href="#home"
-                                style="--i: 1"
-                                >Home</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                class="text-xl font-medium ml-10 hover:text-main"
-                                href="#about"
-                                style="--i: 2"
-                                >About</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                class="text-xl font-medium ml-10 hover:text-main"
-                                href="#skills"
-                                style="--i: 3"
-                                >Skills</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                class="text-xl font-medium ml-10 hover:text-main"
-                                href="#portfolio"
-                                style="--i: 4"
-                                >Portfolio</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                class="text-xl font-medium ml-10 hover:text-main"
-                                href="#contact"
-                                style="--i: 5"
-                                >Contact</a
-                            >
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+        ></header>
+        <script>
+            // script.js
+            document.addEventListener("DOMContentLoaded", function () {
+                fetch("./components/header.html")
+                    .then((response) => response.text())
+                    .then((data) => {
+                        document.getElementById("headerContainer").innerHTML = data;
+                    })
+                    .catch((error) => {
+                        console.error("Gagal mengambil file header.html: " + error);
+                    });
+            });
+        </script>
 
         <main class="">
             <section
@@ -812,9 +777,58 @@
                         id="cards-project"
                         class="grid gap-y-12 sm:grid-cols-2 sm:gap-10 md:grid-cols-3 lg:gap-x-20 lg:gap-y-24"
                     ></div>
+                    <div class="mt-6 lg:mt-10 flex justify-end">
+                        <a
+                            class="inline-flex items-center justify-center rounded-full text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-secondary border text-secondary-foreground hover:bg-secondary/80 h-10 px-4 py-2 group relative"
+                            href="./project/index.html"
+                            ><span class="mr-6">Tampilkan lebih banyak</span>
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="absolute right-0 mr-4 !h-4 shrink-0 !stroke-2 duration-300 group-hover:mr-3"
+                            >
+                                <path
+                                    d="M15.2465 5.74628L19.3752 9.87494C20.5468 11.0465 20.5468 12.946 19.3752 14.1176L15.2465 18.2463M19.7465 11.9963H3.74655"
+                                    stroke="currentColor"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                ></path></svg
+                        ></a>
+                    </div>
 
                     <script>
                         const cardDataProject = [
+                            {
+                                imageSrc: "./assets/img/project/dishub/1.png",
+                                title: "Perizinan Perparkiran",
+                                description:
+                                    "Aplikasi berbasis web yang digunakan untuk mengelola perizinan pengelolaan parkir di Kota Banjarbaru. Mulai dari administrasi pendaftaran, survei lokasi, pembayaran, dan laporan.",
+                                techStack: ["Codeigniter 4", "Bootstrap"],
+                                year: "2022",
+                                link: "./project/perizinan-perparkiran.html",
+                            },
+                            {
+                                imageSrc: "./assets/img/project/bappeda/2.1.png",
+                                title: "Analisis Statistik BAPPEDA",
+                                description:
+                                    "Aplikasi berbasis web Analisis Statistik BAPPEDA Provinsi Kalimantan Selatan. Aplikasi tersebut digunakan untuk menginterpretasikan data ke dalam bentuk grafik.",
+                                techStack: ["Codeigniter 4", "Bootstrap"],
+                                year: "2022",
+                                link: "./project/analisis-statistik-bappeda.html",
+                            },
+                            {
+                                imageSrc: "./assets/img/project/bytecomp/1.png",
+                                title: "Bytecomp 2021",
+                                description:
+                                    "Website yang berguna untuk menghandle perlombaan Bytecomp 2021 yang diadakan Prodi Ilmu Komputer ULM. Website tersebut sebagai sistem informasi perlombaan, pendaftaran perlombaan, dan pembayaran.",
+                                techStack: ["Codeigniter 4", "Bootstrap"],
+                                year: "2021",
+                                link: "./project/bytecomp2021.html",
+                            },
                             {
                                 imageSrc: "./assets/img/project/dishub/1.png",
                                 title: "Perizinan Perparkiran",
